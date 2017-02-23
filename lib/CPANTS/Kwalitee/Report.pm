@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report;
 
-$CPANTS::Kwalitee::Report::VERSION   = '0.01';
+$CPANTS::Kwalitee::Report::VERSION   = '0.02';
 $CPANTS::Kwalitee::Report::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report - CPANTS Kwalitee Report.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -50,8 +50,8 @@ This work is  inspired  by L<Module::CPANTS::Analyse> and  L<Test::Kwalitee>. Th
 main objective of this module  is to provide simple API to query Kwalitee scores.
 
 I came across a script C<kwalitee-metrics>, part of  L<Test::Kwalitee>, where the
-author wish there was an API to do  what she was doing. That prompted me to begin
-the journey.
+author wish there was an API to do what the author was doing. That prompted me to
+begin the journey.
 
 This is what it would look like now, if using this module:
 

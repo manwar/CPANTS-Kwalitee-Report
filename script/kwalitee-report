@@ -2,7 +2,7 @@
 
 #
 # Author: Mohammad S Anwar (mohammad.anwar@yahoo.com)
-# Distribution: CPANTS::Kwalitee::Reporter v0.01.
+# Distribution: CPANTS::Kwalitee::Report v0.02.
 
 package KwaliteeReport;
 

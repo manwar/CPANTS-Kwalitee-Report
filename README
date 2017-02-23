@@ -1,4 +1,4 @@
-CPANTS::Kwalitee::Reporter
+CPANTS::Kwalitee::Report
 
 The README  is  used  to  introduce the module and provide instructions on how to
 install the module, any machine dependencies it may have (for example C compilers
@@ -25,21 +25,21 @@ SUPPORT AND DOCUMENTATION
 After installing,  you  can  find  documentation for this module with the perldoc
 command.
 
-    perldoc CPANTS::Kwalitee::Reporter
+    perldoc CPANTS::Kwalitee::Report
 
 You can also look for information at:
 
     RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=CPANTS-Kwalitee-Reporter
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=CPANTS-Kwalitee-Report
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/CPANTS-Kwalitee-Reporter
+        http://annocpan.org/dist/CPANTS-Kwalitee-Report
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/CPANTS-Kwalitee-Reporter
+        http://cpanratings.perl.org/d/CPANTS-Kwalitee-Report
 
     Search CPAN
-        http://search.cpan.org/dist/CPANTS-Kwalitee-Reporter/
+        http://search.cpan.org/dist/CPANTS-Kwalitee-Report/
 
 LICENSE AND COPYRIGHT
 

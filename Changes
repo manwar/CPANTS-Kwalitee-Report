@@ -1,4 +1,7 @@
 Revision history for CPANTS::Kwalitee::Report
 
+0.02  Thu Feb 23 11:00:00 2017
+      - Fixed typo in the README file.
+
 0.01  Thu Feb 23 10:30:00 2017
       - Module Created.
