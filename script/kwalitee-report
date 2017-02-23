@@ -1,0 +1,47 @@
+#!/usr/bin/perl
+
+#
+# Author: Mohammad S Anwar (mohammad.anwar@yahoo.com)
+# Distribution: CPANTS::Kwalitee::Reporter v0.01.
+
+package KwaliteeReport;
+
+use CPANTS::Kwalitee::Report;
+use Moo;
+use namespace::clean;
+use MooX::Options;
+
+has 'reporter' => (is => 'rw', default => sub { CPANTS::Kwalitee::Report->new });
+
+option 'dist'                    => (is => 'ro', order => 1, format => 's', doc => 'Distribution name to generate Kwalitee report.');
+option 'recently_uploaded_dists' => (is => 'ro', order => 2, doc => 'Lookup recently uploaded distributions.');
+option 'n'                       => (is => 'ro', order => 3, format => 'i', default => sub { 5 }, doc => 'Distribution count to generate Kwalitee report. Default is 5.');
+
+sub BUILD {
+    my ($self) = @_;
+
+    unless ($self->recently_uploaded_dists || $self->dist) {
+        die "ERROR: Missing option --recently_uploaded_dists or --dist.\n";
+    }
+}
+
+sub run {
+    my ($self) = @_;
+
+    my $scores = {};
+    if ($self->recently_uploaded_dists) {
+        my $dists = $self->reporter->recently_uploaded_distributions($self->n);
+        foreach my $dist (@$dists) {
+            $scores->{$dist->name} = $self->reporter->scores($dist->name);
+        }
+    }
+    elsif ($self->dist) {
+        $scores->{$self->dist} = $self->reporter->scores($self->dist);
+    }
+
+    print join "\n------\n", (values %$scores);
+}
+
+package main;
+
+KwaliteeReport->new_with_options->run;
