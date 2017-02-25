@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report::Distribution;
 
-$CPANTS::Kwalitee::Report::Distribution::VERSION   = '0.02';
+$CPANTS::Kwalitee::Report::Distribution::VERSION   = '0.03';
 $CPANTS::Kwalitee::Report::Distribution::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report::Distribution - CPANTS Kwalitee Report Distribution.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 

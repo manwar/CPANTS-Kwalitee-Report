@@ -1,5 +1,8 @@
 Revision history for CPANTS::Kwalitee::Report
 
+0.03  Sat Feb 25 11:00:00 2017
+      - Added two more command line options i.e. "--metrics" and "--verbose".
+
 0.02  Thu Feb 23 11:00:00 2017
       - Fixed typo in the README file.
 

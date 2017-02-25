@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report::Score;
 
-$CPANTS::Kwalitee::Report::Score::VERSION   = '0.02';
+$CPANTS::Kwalitee::Report::Score::VERSION   = '0.03';
 $CPANTS::Kwalitee::Report::Score::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report::Score - Interface to Kwalitee Score.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 

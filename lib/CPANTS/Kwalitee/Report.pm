@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report;
 
-$CPANTS::Kwalitee::Report::VERSION   = '0.02';
+$CPANTS::Kwalitee::Report::VERSION   = '0.03';
 $CPANTS::Kwalitee::Report::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report - CPANTS Kwalitee Report.
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
@@ -83,9 +83,11 @@ More detailed options shown below:
 
          --dist=String              Distribution name to generate Kwalitee
                                     report.
+         --metrics                  Show CPANTS Kwalitee metrics.
          --recently_uploaded_dists  Lookup recently uploaded distributions.
          -n=Int                     Distribution count to generate Kwalitee
                                     report. Default is 5.
+         --verbose                  Be more descriptive. Default is OFF.
 
         --usage                     show a short help message
         -h                          show a compact help message
