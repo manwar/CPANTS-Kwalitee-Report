@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report::Indicator;
 
-$CPANTS::Kwalitee::Report::Indicator::VERSION   = '0.03';
+$CPANTS::Kwalitee::Report::Indicator::VERSION   = '0.04';
 $CPANTS::Kwalitee::Report::Indicator::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report::Indicator - Interface to Kwalitee Indicator.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
@@ -30,7 +30,19 @@ has 'verbose' => (is => 'rw', default => sub { 0 });
 
 =head1 DESCRIPTION
 
+It represents Kwalitee Indicator.
+
 =head1 SYNOPSIS
+
+    use strict; use warnings;
+    use CPANTS::Kwalitee::Report;
+
+    my $report     = CPANTS::Kwalitee::Report->new;
+    my $generators = $report->generators;
+    my $indicators = $generators->[0]->indicators;
+
+    print sprintf("Name       : %s\n", $indicators->[0]->name);
+    print sprintf("Description: %s\n", $indicators->[0]->description);
 
 =head1 METHODS
 

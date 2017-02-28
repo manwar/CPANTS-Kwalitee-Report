@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report;
 
-$CPANTS::Kwalitee::Report::VERSION   = '0.03';
+$CPANTS::Kwalitee::Report::VERSION   = '0.04';
 $CPANTS::Kwalitee::Report::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report - CPANTS Kwalitee Report.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
@@ -89,10 +89,10 @@ More detailed options shown below:
                                     report. Default is 5.
          --verbose                  Be more descriptive. Default is OFF.
 
-        --usage                     show a short help message
-        -h                          show a compact help message
-        --help                      show a long help message
-        --man                       show the manual
+         --usage                    show a short help message
+         -h                         show a compact help message
+         --help                     show a long help message
+         --man                      show the manual
 
 =head1 SYNOPSIS
 

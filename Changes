@@ -1,5 +1,8 @@
 Revision history for CPANTS::Kwalitee::Report
 
+0.04  Tue Feb 28 10:10:00 2017
+      - Documented package CPANTS::Kwalitee::Indicator.
+
 0.03  Sat Feb 25 11:00:00 2017
       - Added two more command line options i.e. "--metrics" and "--verbose".
 
