@@ -1,5 +1,8 @@
 Revision history for CPANTS::Kwalitee::Report
 
+0.05  Fri Mar 03 14:10:00 2017
+      - Preserved the order of uploads.
+
 0.04  Tue Feb 28 10:10:00 2017
       - Documented package CPANTS::Kwalitee::Indicator.
 

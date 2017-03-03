@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report;
 
-$CPANTS::Kwalitee::Report::VERSION   = '0.04';
+$CPANTS::Kwalitee::Report::VERSION   = '0.05';
 $CPANTS::Kwalitee::Report::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report - CPANTS Kwalitee Report.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
@@ -181,8 +181,9 @@ sub recently_uploaded_distributions {
         }
     }
 
-    my $seen  = {};
-    my $feed  = $self->rss->parse_string($self->recent);
+    my $r_dist = [];
+    my $seen   = {};
+    my $feed   = $self->rss->parse_string($self->recent);
     foreach my $item ($feed->query('//item')) {
         my $link = $item->query('link')->text_content;
         my $path = sprintf("%s.tar.gz", $link);
@@ -192,6 +193,7 @@ sub recently_uploaded_distributions {
 
         $seen->{$dist} = 1;
         $self->{recent_dists}->{$dist} = $path;
+        push @$r_dist, { dist => $dist, path => $path };
 
         if (defined $count && (scalar(keys %{$self->{recent_dists}}) == $count)) {
             last;
@@ -199,8 +201,8 @@ sub recently_uploaded_distributions {
     }
 
     my $dists = [];
-    foreach my $dist (keys %{$self->{recent_dists}}) {
-        push @$dists, $self->scores($dist, $self->{recent_dists}->{$dist});
+    foreach my $d (@$r_dist) {
+        push @$dists, $self->scores($d->{dist}, $d->{path});
     }
 
     return $dists;
