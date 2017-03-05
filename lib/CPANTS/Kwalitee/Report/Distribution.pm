@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report::Distribution;
 
-$CPANTS::Kwalitee::Report::Distribution::VERSION   = '0.05';
+$CPANTS::Kwalitee::Report::Distribution::VERSION   = '0.06';
 $CPANTS::Kwalitee::Report::Distribution::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report::Distribution - CPANTS Kwalitee Report Distribution.
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
@@ -23,6 +23,7 @@ use overload q{""} => 'as_string', fallback => 1;
 
 has 'name'   => (is => 'ro', required => 1);
 has 'path'   => (is => 'ro', required => 1);
+has 'link'   => (is => 'rw');
 has 'scores' => (is => 'rw');
 
 =head1 DESCRIPTION
@@ -49,6 +50,10 @@ Returns distribution name.
 =head2 path()
 
 Returns distribution path.
+
+=head2 link()
+
+Returns distribution link.
 
 =head2 scores()
 

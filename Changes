@@ -1,5 +1,8 @@
 Revision history for CPANTS::Kwalitee::Report
 
+0.06  Sun Mar 05 03:10:00 2017
+      - Added attribute 'link' to the package CPANTS::Kwalitee::Report::Distribution.
+
 0.05  Fri Mar 03 14:10:00 2017
       - Preserved the order of uploads.
 

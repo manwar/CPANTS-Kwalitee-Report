@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report;
 
-$CPANTS::Kwalitee::Report::VERSION   = '0.05';
+$CPANTS::Kwalitee::Report::VERSION   = '0.06';
 $CPANTS::Kwalitee::Report::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report - CPANTS Kwalitee Report.
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =cut
 
@@ -193,7 +193,7 @@ sub recently_uploaded_distributions {
 
         $seen->{$dist} = 1;
         $self->{recent_dists}->{$dist} = $path;
-        push @$r_dist, { dist => $dist, path => $path };
+        push @$r_dist, { dist => $dist, path => $path, link => $link };
 
         if (defined $count && (scalar(keys %{$self->{recent_dists}}) == $count)) {
             last;
@@ -202,20 +202,20 @@ sub recently_uploaded_distributions {
 
     my $dists = [];
     foreach my $d (@$r_dist) {
-        push @$dists, $self->scores($d->{dist}, $d->{path});
+        push @$dists, $self->scores($d->{dist}, $d->{path}, $d->{link});
     }
 
     return $dists;
 }
 
-=head2 scores($dist_name, [$dist_path])
+=head2 scores($dist_name, [$dist_path], [$dist_link])
 
 Returns an object of type L<CPANTS::Kwalitee::Report::Distribution>.
 
 =cut
 
 sub scores {
-    my ($self, $dist_name, $dist_path) = @_;
+    my ($self, $dist_name, $dist_path, $dist_link) = @_;
 
     die "ERROR: Missing distribution name.\n" unless (defined $dist_name);
 
@@ -239,6 +239,7 @@ sub scores {
     return CPANTS::Kwalitee::Report::Distribution->new(
         { name   => $dist_name,
           path   => $dist_path,
+          link   => $dist_link,
           scores => $scores
         });
 }
