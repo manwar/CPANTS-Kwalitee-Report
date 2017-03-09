@@ -26,6 +26,7 @@ WriteMakefile(
         'List::Util'       => '1.33',
         'LWP::Simple'      => '6.15',
         'File::Temp'       => '0.2304',
+        'XML::RSS::Parser' => '4.0',
         'Module::CPANTS::Kwalitee' => '0.97',
         'Module::CPANTS::Analyse'  => '0.97',
         'Parse::CPAN::Packages'    => '2.40',

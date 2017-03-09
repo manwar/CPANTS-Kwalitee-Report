@@ -1,6 +1,6 @@
 package CPANTS::Kwalitee::Report::Indicator;
 
-$CPANTS::Kwalitee::Report::Indicator::VERSION   = '0.06';
+$CPANTS::Kwalitee::Report::Indicator::VERSION   = '0.07';
 $CPANTS::Kwalitee::Report::Indicator::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ CPANTS::Kwalitee::Report::Indicator - Interface to Kwalitee Indicator.
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
